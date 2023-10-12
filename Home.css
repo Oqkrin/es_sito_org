@@ -1,6 +1,28 @@
-nav {
-    background-color:antiquewhite;
+:root {
+    --logo-size: 5%;
+}
+body {
+    background-color: #111111;
+}
+
+header {
+    text-align: center;
+    justify-items: center;
     display: flex;
+}
+
+#logo {    
+    height: var(--logo-size);
+    width: var(--logo-size);
+    margin-right: 42.5%;
+}
+
+#titolo {
+    
+}
+
+
+nav {
 }
 
 nav div {
@@ -8,4 +30,5 @@ nav div {
     margin-left: auto;
     margin-right: auto;
 }
+
 
