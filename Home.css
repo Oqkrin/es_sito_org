@@ -1,36 +1,65 @@
 :root {
-    --logo-size: 5%;
+    --logo-size: calc(4vh + 4vw + 1vmin);
 }
 body {
     background-color: #111111;
 }
 
 header {
+    margin-top: 1%;
+    margin-bottom: 0%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-content: center;
+    color: #FFEA00;
 }
 
-
-.logo {    
+#logo {    
     height: var(--logo-size);
-    width: var(--logo-size);
+    width: var(--logo-size);    
+}
+#logo:hover {
+    content: url("https://media.discordapp.net/attachments/660457566073257984/1162514963143864320/Daco_5108489_hover.png?ex=653c376d&is=6529c26d&hm=43cb2e3731051d950913832659cfb6577478fbd45db612a96274d2b8eccf7d68&=&width=705&height=701");
 }
 
 #titolo {
-    
+    align-self: center;
+    font-size: calc(var(--logo-size)/2);
 }
-
-
 
 nav {
-    
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
+    height: 10vh;
 }
 
-nav li{
-    display: inline;
+nav a{
+    height: fit-content;
+    align-self: flex-start;
+    margin-left: 5vw;
 }
 
+nav img {
+    height: calc(var(--logo-size)/2);
+    width: calc(var(--logo-size)/2);
+}
 
+nav img:hover{
+    height: calc(var(--logo-size)/1.8);
+    width: calc(var(--logo-size)/1.8);
+}
+
+#pagina_corrente {
+    align-self: center;
+}
+
+#home:hover{
+    content: url("https://media.discordapp.net/attachments/660457566073257984/1162483509617770496/home_hover.png?ex=653c1a22&is=6529a522&hm=3a7b6b89dca17efd779a4a519629418f8b3f995601613a79d5f1966513a3b739&=&width=460&height=460")
+}
+#chi_siamo:hover{
+    content: url("https://media.discordapp.net/attachments/660457566073257984/1162483510993506434/users-alt_hover.png?ex=653c1a22&is=6529a522&hm=f4fbaefa8a8316c9eade74eb594e7ea795bcc789c392b41ac5eb5efba4d02850&=&width=460&height=460")
+}
+#scrivici:hover{
+    content: url("https://media.discordapp.net/attachments/660457566073257984/1162483510163026021/paper-plane_hover.png?ex=653c1a22&is=6529a522&hm=f3c966002d710e52fb393b44024e6a67628390970c7d466fb48e3b0e4ada5e55&=&width=460&height=460")
+}
