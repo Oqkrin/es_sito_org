@@ -1,65 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@1&family=Mountains+of+Christmas&display=swap");
+
 :root {
-    --logo-size: calc(4vh + 4vw + 1vmin);
+	--logo-size: calc(4vh + 4vw + 1vmin);
 }
+
 body {
-    background-color: #111111;
+	background-color: #050605;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
 }
 
 header {
-    margin-top: 1%;
-    margin-bottom: 0%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    color: #FFEA00;
+	display: flex;
+	padding: 1vh;
+	margin-bottom: 0vh;
+	color: yellow;
+	width: 90%;
+	justify-content: space-between;
 }
 
-#logo {    
-    height: var(--logo-size);
-    width: var(--logo-size);    
+header strong {
+	font-family: "Mountains of Christmas", serif;
+	letter-spacing: 0.1em;
 }
-#logo:hover {
-    content: url("https://media.discordapp.net/attachments/660457566073257984/1162514963143864320/Daco_5108489_hover.png?ex=653c376d&is=6529c26d&hm=43cb2e3731051d950913832659cfb6577478fbd45db612a96274d2b8eccf7d68&=&width=705&height=701");
+
+.logo {
+	height: var(--logo-size);
+	width: var(--logo-size);
+}
+
+.logo:hover {
+	content: url("https://media.discordapp.net/attachments/660457566073257984/1162514963143864320/Daco_5108489_hover.png?ex=653c376d&is=6529c26d&hm=43cb2e3731051d950913832659cfb6577478fbd45db612a96274d2b8eccf7d68&=&width=705&height=701");
+	
+}
+
+.zoom:hover {
+    animation: pop 400ms ease-in-out;
+}
+
+.inv {
+	opacity: 0%;
 }
 
 #titolo {
-    align-self: center;
-    font-size: calc(var(--logo-size)/2);
+	align-self: center;
+	font-size: calc(var(--logo-size) / 2);
 }
 
 nav {
-    margin-top: 2vh;
-    display: flex;
-    justify-content: center;
-    height: 10vh;
+	margin-top: 1vh;
+	display: flex;
+	justify-content: center;
+	height: 10vh;
+	width: fit-content;
 }
 
-nav a{
-    height: fit-content;
-    align-self: flex-start;
-    margin-left: 5vw;
-}
-
-nav img {
-    height: calc(var(--logo-size)/2);
-    width: calc(var(--logo-size)/2);
-}
-
-nav img:hover{
-    height: calc(var(--logo-size)/1.8);
-    width: calc(var(--logo-size)/1.8);
+nav a {
+	height: fit-content;
 }
 
 #pagina_corrente {
-    align-self: center;
+	align-self: center;
+	margin-left: 5vw;
+	margin-right: 5vw;
 }
 
-#home:hover{
-    content: url("https://media.discordapp.net/attachments/660457566073257984/1162483509617770496/home_hover.png?ex=653c1a22&is=6529a522&hm=3a7b6b89dca17efd779a4a519629418f8b3f995601613a79d5f1966513a3b739&=&width=460&height=460")
+nav img {
+	height: calc(var(--logo-size) / 2.2);
+	width: calc(var(--logo-size) / 2.2);
 }
-#chi_siamo:hover{
-    content: url("https://media.discordapp.net/attachments/660457566073257984/1162483510993506434/users-alt_hover.png?ex=653c1a22&is=6529a522&hm=f4fbaefa8a8316c9eade74eb594e7ea795bcc789c392b41ac5eb5efba4d02850&=&width=460&height=460")
+
+nav img:hover {
+	animation: pop 400ms ease-in-out;
 }
-#scrivici:hover{
-    content: url("https://media.discordapp.net/attachments/660457566073257984/1162483510163026021/paper-plane_hover.png?ex=653c1a22&is=6529a522&hm=f3c966002d710e52fb393b44024e6a67628390970c7d466fb48e3b0e4ada5e55&=&width=460&height=460")
+
+@keyframes pop {
+	from,
+	to {
+		scale: 1;
+	}
+
+	50% {
+		scale: 1.08;
+	}
+}
+
+#home:hover {
+	content: url("https://media.discordapp.net/attachments/660457566073257984/1163070070805770341/home_hover.png?ex=653e3c69&is=652bc769&hm=a99823b32aacf3856f14fa828df853d651a513fb18625117515970e4e10dcd03&=&width=460&height=460");
+}
+
+#chi_siamo:hover {
+	content: url("https://media.discordapp.net/attachments/660457566073257984/1163070072470900886/users-alt_hover.png?ex=653e3c6a&is=652bc76a&hm=d1e270e6fde7176cf6d16159510d8e26564414fe05d3f92b586ab597dbc1109a&=&width=460&height=460");
+}
+
+#scrivici:hover {
+	content: url("https://media.discordapp.net/attachments/660457566073257984/1163070071770452019/paper-plane_hover.png?ex=653e3c69&is=652bc769&hm=0afa467105d754b1f0d2ff420271087d5b24973509dfc306ad3fc78191d314c7&=&width=460&height=460");
+}
+
+main {
+	flex-grow: 1;
+    width: 50vw;
+    text-align: justify;
+}
+
+#main_chi_siamo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+#main_chi_siamo img {
+    margin-top: 7%;
+    width: calc(var(--logo-size)*2);
+    height: calc(var(--logo-size)*2);
+}
+
+main h1 {
+    font-size: 2em;
+    color: #a2a244;
+    
+}
+
+main p{
+    font-size: 1em;
+    color: #92927c;
+}
+
+#main_chi_siamo h1{
+    margin-top: 40%;
+}
+
+main table{
+    margin: auto;
+    border: 2px solid yellow;
+    color: #92927c;
+}
+
+main td {
+    border: 1px groove yellow;
+}
+
+#span {
+    height: fit-content;
+	width: 75%;
+}
+
+#span hr {
+	height: 0.1vh;
+	background-color: yellow;
+    border-radius: 10%;
+	border:none;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 90%;
+}
+
+.social *:hover {
+	animation: pop 400ms ease-in-out;
+}
+
+.social {
+	display: flex;
+	justify-self: flex-end;
+	width: var(--logo-size);
+}
+
+.social img {
+	width: calc(var(--logo-size) / 3);
+	height: calc(var(--logo-size) / 3);
+}
+
+#footer_centro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "IM Fell Double Pica", serif;
+	color: #92927c;
+	font-size: 1.1em;
+}
+
+#footer_centro em {
+	margin-top: 5vh;
+	margin-bottom: 0vh;
+}
+
+#footer_centro iframe {
+	height: 10vh;
+	margin-top: 2vh;
+	border: none;
+	width: 30vw;
+}
+
+footer a {
+	padding-left: 1vw;
+}
+
+footer .logo {
+	align-self: center;
+	height: calc(var(--logo-size) / 1.5);
+	width: calc(var(--logo-size) / 1.5);
 }
